@@ -4,7 +4,7 @@ An AI customer support agent built with **LangGraph**, **Groq (Llama 3.3)**, and
 
 ## 🔗 Live Demo
 
-https://customer-support-agent-with-hitl-and-rag.onrender.com
+https://customer-support-agent-with-hitl-and-rag.streamlit.app/
 
 > Note: the backend runs on a free tier and may take 30-60 seconds to wake up on the first request after inactivity.
 
