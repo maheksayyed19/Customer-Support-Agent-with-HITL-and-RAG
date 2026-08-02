@@ -18,11 +18,11 @@ DOCS_DIR = os.path.join(os.path.dirname(__file__), "docs")
 CHROMA_PATH = os.path.join(os.path.dirname(__file__), "data", "chroma_store")
 
 # Free, local, open-source embedding model -- no API key or cost, unlike OpenAI embeddings.
-EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
-
-_embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-    model_name=EMBED_MODEL_NAME
-)
+# Uses ChromaDB's built-in ONNX-based embedding function -- same underlying
+# model (all-MiniLM-L6-v2) as sentence-transformers, but runs on ONNX Runtime
+# instead of full PyTorch. This cuts memory usage from 400MB+ down to under
+# 100MB, which matters on free-tier hosting (e.g. Render's 512MB RAM cap).
+_embedding_fn = embedding_functions.DefaultEmbeddingFunction()
 
 _client = chromadb.PersistentClient(path=CHROMA_PATH)
 _collection = _client.get_or_create_collection(

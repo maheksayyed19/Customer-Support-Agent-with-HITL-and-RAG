@@ -8,4 +8,3 @@ requests
 pydantic
 python-dotenv
 chromadb
-sentence-transformers
