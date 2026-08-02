@@ -1,0 +1,11 @@
+langgraph==1.2.10
+langchain-groq
+groq
+fastapi
+uvicorn
+streamlit
+requests
+pydantic
+python-dotenv
+chromadb
+sentence-transformers
