@@ -8,7 +8,7 @@ Two views:
 import streamlit as st
 import requests
 
-API_BASE = "http://localhost:8000"
+API_BASE = "https://customer-support-agent-with-hitl-and-rag.onrender.com"
 
 st.set_page_config(page_title="Support Agent - HITL Dashboard", layout="wide")
 st.title("🎧 Customer Support Agent — Human-in-the-Loop")
